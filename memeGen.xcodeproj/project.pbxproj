@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C01C54E5289CF7D000F3C07A /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01C54E3289CF7D000F3C07A /* CardCell.swift */; };
+		C01C54E6289CF7D000F3C07A /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C01C54E4289CF7D000F3C07A /* CardCell.xib */; };
+		C01C54E8289CFEA700F3C07A /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01C54E7289CFEA700F3C07A /* UIImageExtension.swift */; };
 		C02637B82897FC65004F6B65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02637B72897FC65004F6B65 /* AppDelegate.swift */; };
 		C02637BA2897FC65004F6B65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02637B92897FC65004F6B65 /* SceneDelegate.swift */; };
 		C02637BC2897FC65004F6B65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02637BB2897FC65004F6B65 /* ViewController.swift */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C01C54E3289CF7D000F3C07A /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		C01C54E4289CF7D000F3C07A /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
+		C01C54E7289CFEA700F3C07A /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		C02637B42897FC65004F6B65 /* memeGen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memeGen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C02637B72897FC65004F6B65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C02637B92897FC65004F6B65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +62,7 @@
 		C02637B62897FC65004F6B65 /* memeGen */ = {
 			isa = PBXGroup;
 			children = (
+				C09B21D5289D28E100E1984D /* Helpers */,
 				C02637B72897FC65004F6B65 /* AppDelegate.swift */,
 				C02637B92897FC65004F6B65 /* SceneDelegate.swift */,
 				C02637BB2897FC65004F6B65 /* ViewController.swift */,
@@ -63,8 +70,18 @@
 				C02637C02897FC66004F6B65 /* Assets.xcassets */,
 				C02637C22897FC66004F6B65 /* LaunchScreen.storyboard */,
 				C02637C52897FC66004F6B65 /* Info.plist */,
+				C01C54E3289CF7D000F3C07A /* CardCell.swift */,
+				C01C54E4289CF7D000F3C07A /* CardCell.xib */,
+				C01C54E7289CFEA700F3C07A /* UIImageExtension.swift */,
 			);
 			path = memeGen;
+			sourceTree = "<group>";
+		};
+		C09B21D5289D28E100E1984D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +145,7 @@
 				C02637C42897FC66004F6B65 /* LaunchScreen.storyboard in Resources */,
 				C02637C12897FC66004F6B65 /* Assets.xcassets in Resources */,
 				C02637BF2897FC65004F6B65 /* Main.storyboard in Resources */,
+				C01C54E6289CF7D000F3C07A /* CardCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +159,8 @@
 				C02637BC2897FC65004F6B65 /* ViewController.swift in Sources */,
 				C02637B82897FC65004F6B65 /* AppDelegate.swift in Sources */,
 				C02637BA2897FC65004F6B65 /* SceneDelegate.swift in Sources */,
+				C01C54E8289CFEA700F3C07A /* UIImageExtension.swift in Sources */,
+				C01C54E5289CF7D000F3C07A /* CardCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
