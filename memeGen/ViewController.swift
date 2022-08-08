@@ -12,6 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var memeViewModal = MemeViewModal()
 
     
+    @IBOutlet weak var tableView: UITableView!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return memeViewModal.memeData?.data.memes.count ?? 0
     }
@@ -23,17 +24,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 100
-//    }
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let vc = DetailsVC()
-//        vc.meme = memeViewModal.memeData?.data.memes[indexPath.row]
-//        self.navigationController?.pushViewController(vc, animated: true)
-//    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = DetailsVCViewController()
+        vc.meme = memeViewModal.memeData?.data.memes[indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
 
-    @IBOutlet weak var tableView: UITableView!
+//    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         let nib = UINib(nibName: "CardCell", bundle: nil)
