@@ -9,19 +9,28 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-   
+    var memeViewModal = MemeViewModal()
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return memeViewModal.memeData?.data.memes.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CardCell", for: indexPath) as! CardCell
-        cell.labelCell.text = "Label"
-        cell.imageViewCell.image = UIImage(named: "ellipse")
-        
+        let cell: CardCell = tableView.dequeueReusableCell(withIdentifier: "CardCell", for: indexPath) as! CardCell
+        cell.meme = memeViewModal.memeData?.data.memes[indexPath.row]
         return cell
     }
+    
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 100
+//    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let vc = DetailsVC()
+//        vc.meme = memeViewModal.memeData?.data.memes[indexPath.row]
+//        self.navigationController?.pushViewController(vc, animated: true)
+//    }
     
 
     @IBOutlet weak var tableView: UITableView!
@@ -31,6 +40,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.register(nib, forCellReuseIdentifier: "CardCell")
         tableView.delegate = self
         tableView.dataSource = self
+        getMemesData()
+
+    }
+
+    func getMemesData() {
+        memeViewModal.timeToReloadTable = { [weak self] in
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }
+        memeViewModal.fetchMemesFromServer()
     }
 
 
