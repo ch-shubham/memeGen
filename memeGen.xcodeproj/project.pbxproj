@@ -25,6 +25,7 @@
 		C0E4A1D728A0EBFE00B31374 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E4A1D628A0EBFE00B31374 /* SceneDelegate.swift */; };
 		C0E4A1DA28A103EC00B31374 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E4A1D828A103EC00B31374 /* DashboardViewController.swift */; };
 		C0E4A1DB28A103EC00B31374 /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0E4A1D928A103EC00B31374 /* DashboardViewController.xib */; };
+		C0F3B28D28A27B4200C6319E /* ShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F3B28C28A27B4200C6319E /* ShareManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		C0E4A1D628A0EBFE00B31374 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C0E4A1D828A103EC00B31374 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		C0E4A1D928A103EC00B31374 /* DashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
+		C0F3B28C28A27B4200C6319E /* ShareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				C0E4A1C528A0CFA600B31374 /* ImageDownloader.swift */,
 				C0E4A1C728A0CFDC00B31374 /* NetworkingManager.swift */,
 				C0E4A1C928A0D07100B31374 /* Constants.swift */,
+				C0F3B28C28A27B4200C6319E /* ShareManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				C0E4A1D128A0D2D600B31374 /* MemeData.swift in Sources */,
 				C0E4A1C828A0CFDC00B31374 /* NetworkingManager.swift in Sources */,
 				C0E4A1CA28A0D07100B31374 /* Constants.swift in Sources */,
+				C0F3B28D28A27B4200C6319E /* ShareManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

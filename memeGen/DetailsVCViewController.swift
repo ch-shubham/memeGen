@@ -10,6 +10,7 @@ import UIKit
 class DetailsVCViewController: UIViewController {
     var meme: Meme?
     var memeVM: MemeViewModal?
+    var documentInteractionController = UIDocumentInteractionController()
     @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,34 @@ class DetailsVCViewController: UIViewController {
     @IBAction func previousButtonPressed(_ sender: UIButton) {
         meme = memeVM?.getPreviousMeme()
         setVCProperties()
+    }
+    @IBAction func shareButtonPressed(_ sender: Any) {
+        let urlWhats = "whatsapp://app"
+            if let urlString = urlWhats.addingPercentEncoding(withAllowedCharacters:CharacterSet.urlQueryAllowed) {
+                if let whatsappURL = URL(string: urlString) {
+
+                    if UIApplication.shared.canOpenURL(whatsappURL as URL) {
+
+                        if let image = UIImage(named: "whatsappIcon") {
+                            if let imageData = image.jpegData(compressionQuality: 1.0) {
+                                let tempFile = URL(fileURLWithPath: NSHomeDirectory()).appendingPathComponent("Documents/whatsAppTmp.wai")
+                                do {
+                                    try imageData.write(to: tempFile, options: .atomic)
+                                    self.documentInteractionController = UIDocumentInteractionController(url: tempFile)
+                                    self.documentInteractionController.uti = "net.whatsapp.image"
+                                    self.documentInteractionController.presentOpenInMenu(from: CGRect.zero, in: self.view, animated: true)
+
+                                } catch {
+                                    print(error)
+                                }
+                            }
+                        }
+
+                    } else {
+                       print("Cannot open whatsapp")
+                    }
+                }
+            }
     }
     /*
     // MARK: - Navigation
