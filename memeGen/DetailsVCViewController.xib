@@ -26,14 +26,38 @@
                         <constraint firstAttribute="height" constant="300" id="hYc-Sa-mwn"/>
                     </constraints>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYm-F2-nfj">
+                    <rect key="frame" x="303" y="644" width="54" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                    <connections>
+                        <action selector="nextButtonPressed:" destination="-1" eventType="touchUpInside" id="zy1-NX-M7h"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5L-JZ-hGn">
+                    <rect key="frame" x="57" y="644" width="96" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Previous"/>
+                    <connections>
+                        <action selector="previousButtonPressed:" destination="-1" eventType="touchUpInside" id="LgL-1g-P7D"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="j5L-JZ-hGn" secondAttribute="bottom" constant="187" id="0OY-2W-H5H"/>
+                <constraint firstItem="BYm-F2-nfj" firstAttribute="top" secondItem="8cY-eh-wtX" secondAttribute="bottom" constant="46" id="4CA-We-enG"/>
+                <constraint firstItem="j5L-JZ-hGn" firstAttribute="top" secondItem="8cY-eh-wtX" secondAttribute="bottom" constant="46" id="AoN-gV-qvt"/>
                 <constraint firstItem="8cY-eh-wtX" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="LXk-BL-J7u"/>
+                <constraint firstItem="BYm-F2-nfj" firstAttribute="leading" secondItem="j5L-JZ-hGn" secondAttribute="trailing" constant="150" id="SVz-96-S83"/>
                 <constraint firstItem="8cY-eh-wtX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ctB-pL-a7w"/>
+                <constraint firstItem="j5L-JZ-hGn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="57" id="gmv-3y-2Sm"/>
+                <constraint firstItem="BYm-F2-nfj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="303" id="my5-yw-YQ7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="BYm-F2-nfj" secondAttribute="bottom" constant="187" id="owt-SI-iXG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BYm-F2-nfj" secondAttribute="trailing" constant="57" id="r9L-je-gma"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="113"/>
+            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
         </view>
     </objects>
     <resources>

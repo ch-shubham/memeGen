@@ -9,7 +9,7 @@ import UIKit
 
 class DetailsVCViewController: UIViewController {
     var meme: Meme?
-
+    var memeVM: MemeViewModal?
     @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +24,15 @@ class DetailsVCViewController: UIViewController {
 
     func setVCProperties() {
         self.imageView.loadThumbnail(urlSting: meme?.url ?? "https://dummyimage.com/300x300")
+    }
+    @IBAction func nextButtonPressed(_ sender: UIButton) {
+//        print(memeVM?.getNextMeme())
+        meme = memeVM?.getNextMeme()
+        setVCProperties()
+    }
+    @IBAction func previousButtonPressed(_ sender: UIButton) {
+        meme = memeVM?.getPreviousMeme()
+        setVCProperties()
     }
     /*
     // MARK: - Navigation

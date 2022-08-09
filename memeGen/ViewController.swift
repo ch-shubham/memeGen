@@ -30,6 +30,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = DetailsVCViewController()
         vc.meme = memeViewModal.memeData?.data.memes[indexPath.row]
+        vc.memeVM = memeViewModal
+        print("Ibdex Path: \(indexPath.row)")
+        memeViewModal.setCurrentSelection(at: indexPath.row)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

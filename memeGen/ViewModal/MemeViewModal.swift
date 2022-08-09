@@ -8,6 +8,8 @@
 import Foundation
 class MemeViewModal {
     
+    private var currentSelection:Int?
+    
     init() {
         
     }
@@ -31,5 +33,28 @@ class MemeViewModal {
                 print(error)
             }
         }
+    }
+    
+    func setCurrentSelection(at index: Int){
+        currentSelection = index;
+    }
+    
+    func getNextMeme() -> Meme?{
+        if currentSelection! >= (memeData?.data.memes.count)! - 1 {
+            currentSelection = 0
+            return memeData?.data.memes[0]
+        }
+        setCurrentSelection(at: (currentSelection ?? 0) + 1)
+        return memeData?.data.memes[currentSelection ?? 0]
+    }
+    
+    
+    func getPreviousMeme() -> Meme?{
+        if currentSelection! <= 0 {
+            currentSelection = (memeData?.data.memes.count)! - 1
+            return memeData?.data.memes[0]
+        }
+        setCurrentSelection(at: (currentSelection ?? 0) - 1)
+        return memeData?.data.memes[currentSelection ?? 0]
     }
 }
